@@ -1,9 +1,9 @@
 .background {
   position: relative;
   top: 200px;
-  background-color: rgba(255, 255, 255, 0.644);
-  padding: 30px 100px;
-  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.753);
+  padding: 30px 120px;
+  max-width: 700px;
   border-radius: 8px;
   min-height: 500px;
   margin: auto;
@@ -20,16 +20,22 @@
   color: black;
 }
 
-.login-label {
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.email-icon {
+    margin: auto;
+    transform: scale(1.05);
+   
+}
+
+.input-container .login-input {
+    padding: 8px 10px !important;
+    font-size: 18px;
     margin-left: 10px;
-}
-
-.login-input {
-    padding: 10px !important;
-}
-
-#password {
-    padding: 15px;
 }
 
 .login-button {
