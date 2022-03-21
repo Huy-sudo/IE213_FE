@@ -1,22 +1,39 @@
 .background {
   position: relative;
   top: 200px;
-  background-color: white;
-  padding: 30px 80px;
+  background-color: rgba(255, 255, 255, 0.644);
+  padding: 30px 100px;
   max-width: 600px;
+  border-radius: 8px;
+  min-height: 500px;
   margin: auto;
-  opacity: 0.2;
 }
 
 .background h1 {
-    text-align: center;
+  text-align: center;
+  opacity: initial;
 }
 
 .background .loginform {
   margin: auto;
-  opacity: 1;
+  font-size: 20px !important;
+  color: black;
 }
 
-.loginform label {
-    font-size: 20;
+.login-label {
+    margin-left: 10px;
+}
+
+.login-input {
+    padding: 10px !important;
+}
+
+#password {
+    padding: 15px;
+}
+
+.login-button {
+    margin-top: 20px;
+    font-size: 20px !important;
+    min-width: 12rem;
 }
