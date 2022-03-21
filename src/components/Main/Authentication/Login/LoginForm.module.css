@@ -1,0 +1,22 @@
+.background {
+  position: relative;
+  top: 200px;
+  background-color: white;
+  padding: 30px 80px;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.2;
+}
+
+.background h1 {
+    text-align: center;
+}
+
+.background .loginform {
+  margin: auto;
+  opacity: 1;
+}
+
+.loginform label {
+    font-size: 20;
+}
