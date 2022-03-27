@@ -25,14 +25,21 @@ const SignUpForm = ({
       <form onSubmit={onSubmit}>
         <TextField
           name="username"
-          floatingLabelText="user name"
+          floatingLabelText="Họ và tên (*)"
           value={user.username}
           onChange={onChange}
           errorText={errors.username}
         />
         <TextField
+          name="phone_number"
+          floatingLabelText="Số điện thoại (*)"
+          value={user.phone_number}
+          onChange={onChange}
+          errorText={errors.phone_number}
+        />
+        <TextField
           name="email"
-          floatingLabelText="email"
+          floatingLabelText="Email"
           value={user.email}
           onChange={onChange}
           errorText={errors.email}
@@ -71,7 +78,7 @@ const SignUpForm = ({
           className="signUpSubmit"
           primary={true}
           type="submit"
-          label="submit"
+          label="Đăng ký"
         />
       </form>
       <p>

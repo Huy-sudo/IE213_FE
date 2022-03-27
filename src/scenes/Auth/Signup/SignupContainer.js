@@ -13,6 +13,7 @@ class SignUpContainer extends Component {
       errors: {},
       user: {
         username: "",
+        phone_number: "",
         email: "",
         password: "",
         pwconfirm: ""
@@ -93,6 +94,7 @@ class SignUpContainer extends Component {
       });
       var user = {
         usr: this.state.user.username,
+        phone: this.state.user.phone_number,
         pw: this.state.user.password,
         email: this.state.user.email
       };
