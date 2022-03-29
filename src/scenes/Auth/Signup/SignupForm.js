@@ -3,6 +3,7 @@ import FlatButton from "material-ui/FlatButton";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import PasswordStr from "./PasswordStr";
+
 import "./style.css";
 
 const SignUpForm = ({
@@ -18,6 +19,8 @@ const SignUpForm = ({
   onPwChange
 }) => {
   return (
+    <div>
+
     <div className="loginBox">
       <h1>Sign Up</h1>
       {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
@@ -61,7 +64,7 @@ const SignUpForm = ({
                 className="pwShowHideBtn" 
                 label={btnTxt} onClick={pwMask} 
                 style={{position: 'relative', left: '50%', transform: 'translateX(-50%)'}} 
-              />
+                />
             </div>
             )} 
         </div>
@@ -72,7 +75,7 @@ const SignUpForm = ({
           value={user.pwconfirm}
           onChange={onChange}
           errorText={errors.pwconfirm}
-        />
+          />
         <br />
         <RaisedButton
           className="signUpSubmit"
@@ -86,6 +89,7 @@ const SignUpForm = ({
         <a href="/">Log in here</a>
       </p>
     </div>
+          </div>
   );
 };
 
