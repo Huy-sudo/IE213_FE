@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import { Button, Spin } from 'antd';
 import { connect } from 'react-redux'
 import Layout from '../../layouts'
-class index extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
 
-    render() {
+function Home() {
         return (
             <div>
                 <Layout>
-                   
                 </Layout>
             </div>
         );
-    }
 }
 
-export default index
+export default Home
