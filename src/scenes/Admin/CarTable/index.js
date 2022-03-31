@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import 'antd/dist/antd.css';
 import { Table, Tag, Space, Button } from 'antd';
-import Layout from "../Main/index"
+import Layout from "../Main/Layout"
 
 
 export default function CarTable() {
@@ -73,7 +73,7 @@ export default function CarTable() {
     ])
 
     return (
-        <Layout index="3" headName="Car">
+        //<Layout index="3" headName="Car">
             <Table dataSource={car}>
                 <Column title="Name" style={{fontWeight: 'bold'}} dataIndex="name" key="name" />
                 <Column title="Code" dataIndex="code" key="code" />
@@ -109,7 +109,7 @@ export default function CarTable() {
                     )}
                 />
             </Table>
-        </Layout>
+        //</Layout>
     )
 }
 
