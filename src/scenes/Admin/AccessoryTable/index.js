@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import 'antd/dist/antd.css';
 import { Table, Tag, Space, Button } from 'antd';
-import Layout from "../Main/Layout"
 
 
 export default function AccessoryTable() {

@@ -67,12 +67,12 @@ export default function LayoutAdmin(props) {
                 </Sider>
                 <Layout className="site-layout" style={{ marginLeft: 200 }}>
                     <Header className="site-layout-background" style={{ padding: 0 }}>
-                        <h1 style={{ color: 'white', margin: '10px' }} >{props.headName}</h1>
+                        <h1 style={{ color: 'white', margin: '10px' }} >Trang Admin</h1>
                         <h3 style={{ color: 'white', margin: '10px' }} >{props.userName}</h3>
                     </Header>
-                    <Content>
-                       {props.children}                          
-                    </Content>
+                    <div>
+                    {props.children} 
+                    </div>                                            
                     <Footer style={{
                         textAlign: 'center',
                         // position: 'fixed',
