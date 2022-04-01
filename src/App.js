@@ -6,7 +6,7 @@ import Admin from './scenes/Admin/Main/Admin';
 import CarTable from './scenes/Admin/CarTable';
 function App() {
   return (
-    <div className="App">
+    <div className="Appp">
      <Admin></Admin>
     </div>
   );

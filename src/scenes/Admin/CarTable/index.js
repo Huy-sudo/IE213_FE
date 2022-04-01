@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import 'antd/dist/antd.css';
 import { Table, Tag, Space, Button } from 'antd';
 import axios from 'axios'
 
 
 export default function CarTable() {
-    const { Column, ColumnGroup } = Table;
+    const { Column} = Table;
     const [car, setCar] = useState([])
 
     const url = 'http://localhost:5000/api/v1/'

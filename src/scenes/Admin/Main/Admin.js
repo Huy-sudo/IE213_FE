@@ -2,6 +2,7 @@ import React from 'react'
 import CarTable from '../CarTable'
 import AccessoryTable from '../AccessoryTable'
 import AccessoryBillTable from '../AccessoryBillTable';
+import CarOrderTable from '../CarOrderTable';
 import {
     Routes,
     Route
@@ -21,6 +22,8 @@ export default function Admin() {
                     <Route path="/accessory" element={<AccessoryTable />}/>
 
                     <Route path="/accessory-bill" element={<AccessoryBillTable />}/>
+
+                    <Route path="/car-order" element={<CarOrderTable/>}></Route>
 
                     <Route path="*" element={
                         <main style={{ padding: "1rem" }}>
