@@ -1,8 +1,8 @@
 import React from 'react'
-import CarTable from '../CarTable'
-import AccessoryTable from '../AccessoryTable'
-import AccessoryBillTable from '../AccessoryBillTable';
-import CarOrderTable from '../CarOrderTable';
+import CarTable from './CarTable'
+import AccessoryTable from './AccessoryTable'
+import AccessoryBillTable from './AccessoryBillTable';
+import CarOrderTable from './CarOrderTable';
 import {
     Routes,
     Route
