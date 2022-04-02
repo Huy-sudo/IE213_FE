@@ -7,7 +7,7 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import LayoutAdmin from './Layout';
+import LayoutAdmin from './LayoutAdmin';
 
 
 export default function Admin() {
