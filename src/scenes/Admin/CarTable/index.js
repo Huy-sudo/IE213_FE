@@ -1,79 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import 'antd/dist/antd.css';
 import { Table, Tag, Space, Button } from 'antd';
-import Layout from "../Main/index"
+import axios from 'axios'
 
 
 export default function CarTable() {
-    const { Column, ColumnGroup } = Table;
-    const [car, setCar] = useState([
-        {
-            "name": "test",
-            "code": "233443221",
-            "price": 3600000000,
-            "deposit": 50000000,
-            "image": "123456qwet",
-            "amount": 100,
-            "description": "this is description for test car",
-            "model": "Hijeep",
-            "warrantyPeriod": 2,
-            "year": 2006,
-            "specification": {
-                "displacement": 600,
-                "power": 200,
-                "maxSpeed": 235,
-                "acceleration": 2.1,
-                "weight": 1500
-            },
-            "color": ["yelow", "red"],
-            "special": "max speed very fast",
-        },
-        {
-            "name": "test",
-            "code": "233443221",
-            "price": 3600000000,
-            "deposit": 50000000,
-            "image": "123456qwet",
-            "amount": 100,
-            "description": "this is description for test car",
-            "model": "Hijeep",
-            "warrantyPeriod": 2,
-            "year": 2006,
-            "specification": {
-                "displacement": 600,
-                "power": 200,
-                "maxSpeed": 235,
-                "acceleration": 2.1,
-                "weight": 1500
-            },
-            "color": ["yelow", "red"],
-            "special": "max speed very fast",
-        },
-        {
-            "name": "test",
-            "code": "233443221",
-            "price": 3600000000,
-            "deposit": 50000000,
-            "image": "123456qwet",
-            "amount": 100,
-            "description": "this is description for test car",
-            "model": "Hijeep",
-            "warrantyPeriod": 2,
-            "year": 2006,
-            "specification": {
-                "displacement": 600,
-                "power": 200,
-                "maxSpeed": 235,
-                "acceleration": 2.1,
-                "weight": 1500
-            },
-            "color": ["yelow", "red", "red", "red", "red", "red"],
-            "special": "max speed very fast",
-        },
-    ])
+    const { Column} = Table;
+    const [car, setCar] = useState([])
+
+    const url = 'http://localhost:5000/api/v1/'
+
+    useEffect(()=>{
+        getAllCar();
+    },[])
+
+    const getAllCar=()=>{
+        axios.get(`${url}car`).then((res)=>{
+            const allcar = res.data.data.car
+            setCar([...allcar]);
+        })
+         
+    }
+    
 
     return (
-        <Layout index="3" headName="Car">
+        //<Layout index="3" headName="Car">
             <Table dataSource={car}>
                 <Column title="Name" style={{fontWeight: 'bold'}} dataIndex="name" key="name" />
                 <Column title="Code" dataIndex="code" key="code" />
@@ -109,7 +60,7 @@ export default function CarTable() {
                     )}
                 />
             </Table>
-        </Layout>
+        //</Layout>
     )
 }
 

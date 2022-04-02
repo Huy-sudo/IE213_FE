@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import 'antd/dist/antd.css';
 import { Table, Tag, Space, Button } from 'antd';
-import Layout from "../Main/index"
 
 
 export default function AccessoryTable() {
@@ -25,7 +24,7 @@ export default function AccessoryTable() {
     ])
 
     return (
-        <Layout index="4" headName="Accessory">
+       // <Layout index="4" headName="Accessory">
         <Table dataSource={accessory}>
             <Column title="Name" dataIndex="name" key="name" />
             <Column title="Code" dataIndex="code" key="code" />
@@ -59,7 +58,7 @@ export default function AccessoryTable() {
                 )}
             />
         </Table>
-        </Layout>
+       // </Layout>
     )
 }
 
