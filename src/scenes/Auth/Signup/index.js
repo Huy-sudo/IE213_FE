@@ -1,13 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SignUpContainer from "./SignupContainer"
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import './index.css'
+import Layout from "../../../layouts/index"
+import AuthenContext from '../../../components/context/AuthenContext';
 
-const App = () => (
-  <MuiThemeProvider>
-    <SignUpContainer />
-  </MuiThemeProvider>
-);
+function App() {
+  return (
+    <AuthenContext.Consumer>
+      {(context) => {
+        context.isLoggedIn = false;
+        return (
+          <Layout>
+            <MuiThemeProvider>
+              <SignUpContainer />
+            </MuiThemeProvider>
+          </Layout>
+        );
+      }}
+    </AuthenContext.Consumer>
+
+  )
+};
 
 export default App
